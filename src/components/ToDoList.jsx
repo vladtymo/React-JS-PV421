@@ -1,9 +1,25 @@
+import { useState } from "react";
 import ToDoItem from "./ToDoItem";
 
-export default function ToDoList({ tasks }) {
+export default function ToDoList({ tasksList }) {
+
+    const [list, setList] = useState(tasksList);
+
+    function removeItem(id) {
+        // list = list.filter(i => i.id !== id);
+        setList(list.filter(i => i.id !== id));
+    }
+
     return (
-        <ul class="todo_list">
-            {tasks.map(i => <ToDoItem {...i} />)}
-        </ul>
+        <>
+            {
+                list.length === 0 ?
+                    <p>No tasks!</p>
+                    :
+                    <ul class="todo_list">
+                        {list.map(task => <ToDoItem {...task} removeFunction={removeItem} />)}
+                    </ul>
+            }
+        </>
     );
 }
