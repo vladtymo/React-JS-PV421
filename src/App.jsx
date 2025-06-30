@@ -26,8 +26,6 @@ const OTHER_TASKS = [
 ]
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <BrowserRouter>
       <Routes>
@@ -39,15 +37,8 @@ function App() {
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
-    </BrowserRouter >
+    </BrowserRouter>
   )
 }
 
 export default App
-
-// {/* <h1>Hello React</h1>
-//       <Counter />
-//       <hr />
-//       <ToDoList tasksList={TASKS} />
-//       <h2>Other List</h2>
-//       <ToDoList tasksList={OTHER_TASKS} /> */}
