@@ -16,7 +16,7 @@ export default function ToDoList({ tasksList }) {
                 list.length === 0 ?
                     <p>No tasks!</p>
                     :
-                    <ul class="todo_list">
+                    <ul className="todo_list">
                         {list.map(task => <ToDoItem {...task} removeFunction={removeItem} />)}
                     </ul>
             }

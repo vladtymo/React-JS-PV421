@@ -18,8 +18,8 @@ export default function ToDoItem({ id, title, date, complete, important, removeF
             <input type="checkbox" checked={status} />
             {important ? <span className="important">!</span> : ""}
             {title ?? "No title"}
-            <span class="deadline">01.04.2023</span>
-            <button onClick={() => removeFunction(id)}>Del</button>
+            {date ? <span className="deadline">{date}</span> : ""}
+            <button className="btn-del" onClick={() => removeFunction(id)}>Del</button>
         </li>
     );
 }
