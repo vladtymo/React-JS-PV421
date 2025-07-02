@@ -7,8 +7,9 @@ export default function Layout() {
             <header>
                 <nav>
                     <ul>
-                        <li><Link to="/home">Home</Link></li>
+                        <li><Link to="/">Home</Link></li>
                         <li><Link to="/counter">Counter</Link></li>
+                        <li><Link to="/create">Create</Link></li>
                         <li><Link to="/list1">List 1</Link></li>
                         <li><Link to="/list2">List 2</Link></li>
                     </ul>

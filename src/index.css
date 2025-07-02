@@ -100,3 +100,30 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.CreateTask {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+}
+
+.CreateTask h2 {
+  text-align: center;
+}
+
+.CreateTask label {
+  width: 100%;
+  display: flex;
+  gap: 6px;
+}
+
+.CreateTask label input {
+  flex-grow: 1;
+}
+
+.CreateTask label input[type="checkbox"] {
+  flex-grow: 0;
+}
