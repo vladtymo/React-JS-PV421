@@ -9,6 +9,8 @@ import Home from './components/Home'
 import NoPage from './components/NoPage'
 import Layout from './components/Layout'
 import CreateTask from './components/CreateTask'
+import ProductList from './components/ProductList'
+import Lifecycle from './components/Lifecycle'
 
 const TASKS = [
   { id: 1, title: 'First task', important: false, complete: false, date: '01.04.2023' },
@@ -33,6 +35,8 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="counter" element={<Counter />} />
+          <Route path="products" element={<ProductList />} />
+          <Route path="lifecycle" element={<Lifecycle />} />
           <Route path="create" element={<CreateTask />} />
           <Route path="list1" element={<ToDoList tasksList={TASKS} />} />
           <Route path="list2" element={<ToDoList tasksList={OTHER_TASKS} />} />
