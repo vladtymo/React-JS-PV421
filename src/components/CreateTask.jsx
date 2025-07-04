@@ -27,7 +27,7 @@ export default function CreateTask({ onCreate }) {
             <form className="CreateTask" onSubmit={handleSubmit(onSubmit)}>
                 <label>
                     Title:
-                    <input {...register("title")} type="text" name="title" />
+                    <input {...register("title", { required: true, minLength: 5 })} type="text" name="title" />
                 </label>
                 <label>
                     Date:
